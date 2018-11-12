@@ -26,6 +26,13 @@ struct VRState
 	ovrTrackerDesc sensorDesc[4];
 };
 
+struct Keyframe
+{
+	double time;
+	OVR::Vector3f position;
+	OVR::Quatf orientation;
+};
+
 class StateManager
 {
 public:
@@ -44,5 +51,10 @@ public:
 	StateManager();
 	VRState poll(ovrSession hmd, double time);
 	void reset();
-	
+	void writeDAECamera(std::fstream &out, std::string name, float hfov, float vfov, float near, float far);
+	void writeDAEPositions(std::fstream &out, std::vector<Keyframe> &keys, std::string name);
+	void writeDAEOrientation(std::fstream &out, std::vector<Keyframe> &keys, std::string name);
+	void exportCSV(const std::string &filename);
+	void exportDAE(ovrSession hmd, const std::string &filename);
+
 };
