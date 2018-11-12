@@ -32,6 +32,7 @@ Room layout:
 Change History
 v0.1.0 - Initial release. Built against Oculus SDK 1.26
 v0.2.0 - Recording, replay and export added
+v0.2.1 - Added Collada export
 
 Installation
 Oculus Monitor can be placed anywhere. No explicit installation is required.
@@ -49,10 +50,11 @@ Note: Position tracking of Touch controllers doesn't work unless the headset pro
 
 
 Recording/Replay
-A new Playback panel has been added. All major properties (touch tracking and state, headset tracking, sensor poses) can now be recorded and played back. There 6 controls in this panel:
+A new Playback panel has been added. All major properties (touch tracking and state, headset tracking, sensor poses) can now be recorded and played back. There 7 controls in this panel:
 - Record : Start recording the state. Frames are captured based on your monitor framerate. Press record a second time to stop recording. Each time you start recording, it will wipe the previous recording.
 - Play : Start replaying the recording. Most panels will show the replay data (not all data is captured per frame, such as headset resolution and serial number, since they don't change at runtime).
 - Stop : Stop playing or recording and go back to live mode (live data is displayed).
 - Pause : Pause the recording or playback.
 - Export CSV : save the tracking data to a CSV file. You can open this in most spreadsheet applications like Excel.
+- Export DAE : save the tracking data to a Collada DAE file. You can open this in Blender (and maybe other 3D software).
 - Time Slider : This lets you scrub through the timeline.
