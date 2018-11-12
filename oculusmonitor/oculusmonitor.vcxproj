@@ -158,12 +158,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\dev\sdk\include\kf\kf_time.h" />
+    <ClInclude Include="aabb.h" />
     <ClInclude Include="imconfig.h" />
     <ClInclude Include="imgui.h" />
     <ClInclude Include="imgui_impl_dx11.h" />
     <ClInclude Include="imgui_impl_win32.h" />
     <ClInclude Include="imgui_internal.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="vrstate.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="imgui.cpp" />
@@ -172,6 +175,7 @@
     <ClCompile Include="imgui_impl_dx11.cpp" />
     <ClCompile Include="imgui_impl_win32.cpp" />
     <ClCompile Include="oculusmonitor.cpp" />
+    <ClCompile Include="vrstate.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

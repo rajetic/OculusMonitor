@@ -33,6 +33,15 @@
     <ClInclude Include="imgui_internal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\dev\sdk\include\kf\kf_time.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vrstate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="aabb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="imgui.cpp">
@@ -51,6 +60,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="oculusmonitor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vrstate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -31,6 +31,7 @@ Room layout:
 
 Change History
 v0.1.0 - Initial release. Built against Oculus SDK 1.26
+v0.2.0 - Recording, replay and export added
 
 Installation
 Oculus Monitor can be placed anywhere. No explicit installation is required.
@@ -45,3 +46,13 @@ The current origin (when you reset the view) is a red circle with a three axis o
 The three axis orientation markers are red to the right, green upwards and blue forwards.
 
 Note: Position tracking of Touch controllers doesn't work unless the headset proximity sensor is active (by wearing the headset, putting an object like a cloth on it, or forced on by the Oculus Debug Tool). The orientation of Touch controllers may also be wrong until they can be calibrated by the headset proximity sensor being active at least once (after that they are tracked with the IMU gyroscopes).
+
+
+Recording/Replay
+A new Playback panel has been added. All major properties (touch tracking and state, headset tracking, sensor poses) can now be recorded and played back. There 6 controls in this panel:
+- Record : Start recording the state. Frames are captured based on your monitor framerate. Press record a second time to stop recording. Each time you start recording, it will wipe the previous recording.
+- Play : Start replaying the recording. Most panels will show the replay data (not all data is captured per frame, such as headset resolution and serial number, since they don't change at runtime).
+- Stop : Stop playing or recording and go back to live mode (live data is displayed).
+- Pause : Pause the recording or playback.
+- Export CSV : save the tracking data to a CSV file. You can open this in most spreadsheet applications like Excel.
+- Time Slider : This lets you scrub through the timeline.
