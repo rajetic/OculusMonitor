@@ -18,8 +18,14 @@ struct VRState
 	unsigned int touchButtons;
 	unsigned int touchTouch;
 	ovrVector2f touchThumbStick[2];
+	ovrVector2f touchThumbStickNDZ[2];
+	ovrVector2f touchThumbStickRaw[2];
 	float touchHandTrigger[2];
+	float touchHandTriggerNDZ[2];
+	float touchHandTriggerRaw[2];
 	float touchIndexTrigger[2];
+	float touchIndexTriggerNDZ[2];
+	float touchIndexTriggerRaw[2];
 	ovrTrackingState trackingState;
 	unsigned int sensorCount;
 	ovrTrackerPose sensorPose[4];

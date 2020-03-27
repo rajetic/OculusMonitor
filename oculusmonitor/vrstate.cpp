@@ -27,13 +27,18 @@ VRState StateManager::poll(ovrSession hmd, double time)
 		ovr_GetInputState(hmd, ovrControllerType::ovrControllerType_Touch, &temp);
 		state.touchButtons = temp.Buttons;
 		state.touchTouch = temp.Touches;
-		state.touchHandTrigger[0] = temp.HandTrigger[0];
-		state.touchHandTrigger[1] = temp.HandTrigger[1];
-		state.touchIndexTrigger[0] = temp.IndexTrigger[0];
-		state.touchIndexTrigger[1] = temp.IndexTrigger[1];
-		state.touchThumbStick[0] = temp.Thumbstick[0];
-		state.touchThumbStick[1] = temp.Thumbstick[1];
-
+		for (int i = 0; i < 2; ++i)
+		{
+			state.touchHandTrigger[i] = temp.HandTrigger[i];
+			state.touchHandTriggerNDZ[i] = temp.HandTriggerNoDeadzone[i];
+			state.touchHandTriggerRaw[i] = temp.HandTriggerRaw[i];
+			state.touchIndexTrigger[i] = temp.IndexTrigger[i];
+			state.touchIndexTriggerNDZ[i] = temp.IndexTriggerNoDeadzone[i];
+			state.touchIndexTriggerRaw[i] = temp.IndexTriggerRaw[i];
+			state.touchThumbStick[i] = temp.Thumbstick[i];
+			state.touchThumbStickNDZ[i] = temp.ThumbstickNoDeadzone[i];
+			state.touchThumbStickRaw[i] = temp.ThumbstickRaw[i];
+		}
 		state.sensorCount = ovr_GetTrackerCount(hmd);
 		for (unsigned int i = 0; i < state.sensorCount; ++i)
 		{
