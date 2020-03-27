@@ -1,5 +1,5 @@
 Oculus Monitor
-Copyright (C) 2018 Kojack (rajetic@gmail.com)
+Copyright (C) 2020 Kojack (rajetic@gmail.com)
 
 Oculus Monitor is released under the MIT License  
 https://opensource.org/licenses/MIT
@@ -33,6 +33,7 @@ Change History
 v0.1.0 - Initial release. Built against Oculus SDK 1.26
 v0.2.0 - Recording, replay and export added
 v0.2.1 - Added Collada export
+v0.2.2 - Added raw and no dead zone values to the triggers and thumbsticks.
 
 Installation
 Oculus Monitor can be placed anywhere. No explicit installation is required.
