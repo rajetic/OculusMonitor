@@ -34,6 +34,7 @@ v0.1.0 - Initial release. Built against Oculus SDK 1.26
 v0.2.0 - Recording, replay and export added
 v0.2.1 - Added Collada export
 v0.2.2 - Added raw and no dead zone values to the triggers and thumbsticks.
+v0.2.3 - Added headset tracking (pos/orientation/vel) display. Added tracking origin toggle (eye or floor).
 
 Installation
 Oculus Monitor can be placed anywhere. No explicit installation is required.
